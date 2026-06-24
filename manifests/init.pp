@@ -127,7 +127,7 @@ define createrepo (
       ensure => directory,
       owner  => $repo_owner,
       group  => $repo_group,
-      mode   => '0775',
+      mode   => $repo_mode,
       before => Exec["createrepo-${name}"],
     }
   }
